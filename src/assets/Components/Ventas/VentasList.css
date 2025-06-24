@@ -1,0 +1,113 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Contenedor principal 
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }*/
+  
+  .card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  
+
+  /* Título */
+  .sales-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8a570a;
+    margin: 0;
+  }
+  
+  /* Botón "Agregar Venta" */
+  .add-sale-btn {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #c97507;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .add-sale-btn:hover {
+    background-color: #9e5c06;
+    transform: translateY(-2px);
+  }
+  
+  /* Tabla personalizada */
+  .sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .sales-table thead {
+    background-color: #c7372d;
+    color: white;
+  }
+  
+  .sales-table th, .sales-table td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e3e3e3;
+    font-size: 15px;
+  }
+  
+  .sales-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .sales-table tbody tr:hover {
+    background-color: #f1f3f5;
+    transition: all 0.3s ease;
+  }
+  
+  /* Estilos para celdas específicas */
+  .total {
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  .no-sales {
+    text-align: center;
+    color: #888;
+    padding: 40px 0;
+    font-size: 16px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .sales-table th, .sales-table td {
+      padding: 12px 15px;
+      font-size: 14px;
+    }
+  
+    .add-sale-btn {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,99 @@
+/* Importa la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos de la barra de navegación */
+.sidebar {
+  background-color: #fdf47e; /* Color de fondo amarillo claro */
+  color: #770707; /* Texto oscuro para mejor contraste */
+  font-size: 18px; /* Tamaño de fuente adecuado */
+  padding: 20px;
+  width: 250px; /* Ancho fijo para la barra lateral */
+  height: 100vh; /* Altura completa de la pantalla */
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto; /* Habilita el desplazamiento si es necesario */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 0;
+}
+
+/* Logo */
+.sidebar img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo de los enlaces de navegación */
+.nav-link {
+  color: #070101; /* Texto oscuro */
+  text-decoration: none;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(189, 14, 14, 0.527); /* Fondo suave al pasar el cursor */
+  color: #af1818;
+}
+
+/* Iconos */
+.nav-link .me-2 {
+  margin-right: 10px; /* Espaciado entre icono y texto */
+  font-size: 1.2rem; /* Tamaño del icono */
+}
+
+/* Botón de Cerrar Sesión */
+.nav-link.bg-transparent {
+  background-color: rgba(185, 14, 14, 0.555);
+  border: 0;
+  padding: 12px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-link.bg-transparent:hover {
+  background-color: rgba(185, 14, 14, 0.555);
+  color: #ee0e0e;
+}
+
+/* Ajustes para el contenedor de navegación */
+.nav-item {
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: white !important;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 15px;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

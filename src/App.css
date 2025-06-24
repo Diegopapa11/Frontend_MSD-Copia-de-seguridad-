@@ -1,0 +1,25 @@
+/* Estilos para el sidebar */
+.sidebar {
+  width: 250px; /* Ancho del sidebar */
+  height: 100vh; /* Altura completa de la ventana */
+  position: fixed; /* Fija el sidebar */
+  top: 0;
+  left: 0;
+  overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+}
+
+/* Estilos para el contenido principal */
+.flex-grow-1 {
+  margin-left: 250px; /* Ajusta el margen para no solaparse con el sidebar */
+  width: calc(100% - 250px); /* Ajusta el ancho del contenido */
+}
+
+/* Estilos para los enlaces del sidebar */
+.nav-link {
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Efecto hover */
+}

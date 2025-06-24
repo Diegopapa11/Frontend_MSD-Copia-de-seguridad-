@@ -1,0 +1,204 @@
+/* Estilos generales */
+.ventas-pos-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Títulos */
+  .ventas-pos-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f1f1f1;
+  }
+  
+  /* Sección de productos disponibles */
+  .productos-disponibles {
+    margin-bottom: 2rem;
+  }
+  
+  .productos-disponibles h4 {
+    font-size: 1.4rem;
+    color: #495057;
+    margin-bottom: 1rem;
+  }
+  
+  /* Tarjetas de productos */
+  .product-card {
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Imágenes de productos */
+  .product-image-container {
+    height: 200px; /* Aumentamos el tamaño */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    overflow: hidden;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Cambiado de 'cover' a 'contain' para ver toda la imagen */
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover .product-image {
+    transform: scale(1.05);
+  }
+  
+  /* Cuerpo de la tarjeta */
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #212529;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #28a745;
+  }
+  
+  /* Sección del carrito */
+  .carrito-container {
+    position: sticky;
+    top: 20px;
+  }
+  
+  .resumen-venta {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Lista de productos en carrito */
+  .lista-productos {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .list-group-item {
+    padding: 1rem;
+    border-left: none;
+    border-right: none;
+  }
+  
+  /* Controles de cantidad */
+
+  
+  /* Sección de pago */
+  .pago-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .total-display {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 10px 0;
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+    margin: 15px 0;
+  }
+  
+  /* Botones */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  /* Modal */
+  .modal-content {
+    border-radius: 10px;
+  }
+  
+  .modal-header {
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .modal-footer {
+    border-top: 1px solid #e9ecef;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .product-image-container {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .ventas-pos-container {
+      padding: 15px;
+    }
+    
+    .product-image-container {
+      height: 150px;
+    }
+    
+    .card-title {
+      font-size: 1rem;
+    }
+    
+    .card-text {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .product-image-container {
+      height: 120px;
+    }
+    
+    .ventas-pos-title {
+      font-size: 1.5rem;
+    }
+  }

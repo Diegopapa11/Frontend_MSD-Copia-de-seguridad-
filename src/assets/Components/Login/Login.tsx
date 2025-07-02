@@ -37,62 +37,33 @@ function Login({ empleados }: LoginProps) {
     }
     
     try {
-      // Simulación de tiempo de espera
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
-      let userData: any = null;
+      const response = await fetch("http://127.0.0.1:8000/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
 
-      if (formData.email === "admin@proyecto.com" && formData.password === "12345") {
-        userData = {
-          id: 1,
-          username: "admin",
-          email: formData.email,
-          rol: "admin",
-          name: "Administrador"
-        };
-      } else if (formData.email === "employee@proyecto.com" && formData.password === "54321") {
-        userData = {
-          id: 2,
-          username: "employee",
-          email: formData.email,
-          rol: "employee",
-          name: "Empleado"
-        };
-      } else {
-        const empleado = empleados.find(emp => emp.email === formData.email);
+      const data = await response.json();
 
-        if (!empleado) {
-          throw new Error("No existe un empleado con este email");
-        }
-
-        // Verificar contraseña
-        if (formData.password !== empleado.password) {
-          throw new Error("Contraseña incorrecta");
-        }
-
-        // Crear objeto de usuario autenticado sin duplicados
-        const { password, ...empleadoSinPassword } = empleado;
-        const role = empleado.role === "Administrador" ? "admin" : "employee";
-
-        userData = {
-          ...empleadoSinPassword,
-          username: empleado.email.split('@')[0],
-          rol: role
-        };
+      if (!response.ok) {
+        throw new Error(data.message || "Error al iniciar sesión");
       }
 
-      // Guardar usuario autenticado en localStorage
-      localStorage.setItem('usuarioAutenticado', JSON.stringify(userData));
+      // Suponiendo que el backend regresa un token y datos de usuario:
+      const { user, token } = data;
 
-      // Redirigir al dashboard o página de inicio
+      localStorage.setItem("usuarioAutenticado", JSON.stringify(user));
+      localStorage.setItem("token", token);
+
       navigate("/dashboard");
-
     } catch (err) {
       setError(err instanceof Error ? err.message : "Ocurrió un error al iniciar sesión");
     } finally {
-      setIsLoading(false);
-    }
-  };
+        setIsLoading(false);
+      }
+    };
 
   const handleRegistro = () => {
     navigate("/registro");

@@ -47,7 +47,7 @@ const Dashboard: React.FC = () => {
 
   useEffect(() => {
     // Redirigir si no está autenticado
-    if (!usuarioAutenticado.id) {
+    if (!usuarioAutenticado || !usuarioAutenticado.rol) {
       navigate("/login");
       return;
     }
@@ -129,7 +129,7 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
       
-      {usuarioAutenticado.rol === 'admin' && (
+      {usuarioAutenticado.rol === '1' && (
         <>
           <div className="row">
             <div className="col-md-6 mb-4">
@@ -227,7 +227,7 @@ const Dashboard: React.FC = () => {
         </>
       )}
       
-      {usuarioAutenticado.rol === 'employee' && (
+      {usuarioAutenticado.rol === '2' && (
         <>
           <div className="row">
             <div className="col-md-6 mb-4">
